@@ -25,7 +25,7 @@ public class EfetuarCompra {
 
 	
 	@Test
-	public void efetuarCompraComSucesso() {
+	public void efetuarCompraComCartaoCredito() {
 		driver.manage().window().maximize();
 		PageObjects ecomerceObjetos = new PageObjects(driver);
 
@@ -56,7 +56,7 @@ public class EfetuarCompra {
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 		// driver.close();
-		//driver.quit();
+		driver.quit();
 	}
 
 }

@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -119,14 +120,23 @@ public class PageObjects {
 
 	// método que seleciona mais de um item para compra.
 	public void selecionar2Itens(String qtd) {
-		Select qtdItens = new Select(driver.findElement(By.className("form-control select__quantity")));
-		qtdItens.selectByValue(qtd);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn-buy")));
+		driver.findElement(By.className("btn-buy")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("buy-button")));
+		WebElement qtdItens = driver.findElement(By.tagName("select"));
+		Select select = new Select(qtdItens);
+		select.selectByValue(qtd);
+		driver.findElement(By.id("buy-button")).click();
 	}
 
 	// método que remove item selecionado do carrinho.
 	public void removerItem() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn-buy")));
+		driver.findElement(By.className("btn-buy")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("buy-button")));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("button--link")));
-		driver.findElement(By.className("button--link")).click();
+		driver.findElement(By.className("button--link")).click();		
+		
 		
 	}
 
