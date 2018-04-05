@@ -1,5 +1,6 @@
 package pages;
 
+import java.awt.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -79,19 +80,7 @@ public class PageObjects {
 		driver.findElement(By.className("btn-buy")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("buy-button")));
 		driver.findElement(By.id("buy-button")).click();
-		/*
-		 * if(!driver.findElement(By.id("CONVENTIONAL-menu-item-input")).isDisplayed())
-		 * {
-		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("edit-cep")));
-		 * driver.findElement(By.id("edit-cep")).clear();
-		 * driver.findElement(By.id("edit-cep")).sendKeys(cep);
-		 * driver.findElement(By.id("edit-cep")).sendKeys(Keys.TAB);
-		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("edit-number")
-		 * )); driver.findElement(By.id("edit-number")).click();
-		 * driver.findElement(By.id("edit-number")).sendKeys(numero);
-		 * driver.findElement(By.id("edit-reference")).sendKeys(pontoRef);
-		 * driver.findElement(By.id("edit-cep")).sendKeys(Keys.ENTER); }
-		 */
+	
 
 	}
 
@@ -134,8 +123,7 @@ public class PageObjects {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn-buy")));
 		driver.findElement(By.className("btn-buy")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("buy-button")));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("button--link")));
-		driver.findElement(By.className("button--link")).click();		
+		driver.findElement(By.className("button--link")).click();
 		
 		
 	}
