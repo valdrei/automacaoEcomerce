@@ -1,5 +1,7 @@
 package compraEcomerce_TestCases;
 
+import java.lang.reflect.Executable;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,6 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.PageObjects;
 
 public class EfetuarCompra {
+	
+	//metodo para gerar executavel
+	public void executaEfetuarCompra() {
+		
+	}
 
 	// Instanciando o WebDriver
 	static WebDriver driver;
