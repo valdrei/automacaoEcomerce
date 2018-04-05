@@ -1,4 +1,4 @@
-package compraEcomerce;
+package compraEcomerce_TestCases;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class EfetuarCompra2Itens {
+public class RemoverItemCarrinho {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -18,6 +18,7 @@ public class EfetuarCompra2Itens {
 	public void test() {
 		fail("Not yet implemented");
 	}
+
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {

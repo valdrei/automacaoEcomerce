@@ -1,4 +1,4 @@
-package compraEcomerce;
+package compraEcomerce_TestCases;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -46,10 +46,10 @@ public class EfetuarCompra {
 		ecomerceObjetos.selecionarItem();
 		
 		/* Passo 5 - Preencher dados de entrega do produto */
-		ecomerceObjetos.preencherDadosEntrega("13185015","48","abc");
+		ecomerceObjetos.acionarBotaoComprar("13185015","48","abc");
 		
 		/* Passo 6 - Preencher dados de pagamento */
-		//ecomerceObjetos.
+		ecomerceObjetos.preencherDadosPagamento("1234.5667.8995.5211","Joao S Djavu","1","2","111","10");
 
 	}
 
